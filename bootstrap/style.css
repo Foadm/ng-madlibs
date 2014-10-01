@@ -1,0 +1,5 @@
+.container{padding-top: 25px; margin: 0 auto;}
+.head{height:100px; text-align: center; border:1px solid #ccc;}
+.head>img{height:100%}
+.mainInputs{margin-top:20px;}
+.libs{margin-top:20px;}
