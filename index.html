@@ -6,15 +6,17 @@
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/style.css">
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+
 </head>
-<body>
-    <div class="container" ng-app="">
+<body ng-app="mad-libs">
+    <div class="container" ng-controller="LibsController">
         <div class="row">
             <div class="col-md-3 head"><img src="images/smiley.png"> </div>
             <div class="col-md-9 head"><img src="images/logo.png"></div>
         </div>
         <div class="row mainInputs">
-            <div class="col-md-4"> <input type="text" ng-model='maleName' placeholder = 'Male Name' ></div>
+            <div class="col-md-4"> <input type="text" ng-model='maleName' placeholder = 'Name' ></div>
             <div class="col-md-4"> <input type="text" ng-model='dirtyTask' placeholder = 'Dirty Task' ></div>
             <div class="col-md-4"> <input type="text" ng-model='obnoxiousCelebrity' placeholder = 'Obnoxious Celebrity' ></div>
         </div>
@@ -30,15 +32,24 @@
         </div>
 
         <div class="row libs">
+            <p>
+                <input type="checkbox"  ng-model="male" ng-change="changeToMale()" id="male">
+                <lable for="male">Male</lable>
+            </p>
+            <p>
+                <input type="checkbox" ng-model="female" ng-change="changeToFemale()" id="female">
+                <lable for="female">Female</lable>
+            </p>
+
             <div class="col-md-1"></div>
             <div class="col-md-10">
                 <p>
-                    {{maleName}} was a {{jobTitle}} who loved technology. Although he loved parts of his job, he
-                    absolutely hated  {{tediousTask}} and {{dirtyTask}}. So, {{maleName}} met with his life mentor
-                    {{celebrity}} who told him to learn how to {{uselessSkill}} with Thinkful. Thinkful didn't offer a
-                    course on {{uselessSkill}} so he studied programming instead.
+                    {{maleName}} was a {{jobTitle}} who loved technology. Although {{subject}} loved parts of {{poss}} job, {{subject}}
+                    absolutely hated  {{tediousTask}} and {{dirtyTask}}. So, {{maleName}} met with {{poss}} life mentor
+                    {{celebrity}} who told {{possessive}} to learn how to {{uselessSkill}} with Thinkful. Thinkful didn't offer a
+                    course on {{uselessSkill}} so {{subject}} studied programming instead.
 
-                    What a great decision! With his new skills, {{maleName}} built a(n) {{adjective}} robot named
+                    What a great decision! With {{poss}} new skills, {{maleName}} built a(n) {{adjective}} robot named
                     {{obnoxiousCelebrity}} that not only loved {{dirtyTask}} but did it {{HugeNumber}} faster.
 
                 </p>
