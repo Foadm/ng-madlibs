@@ -20,5 +20,27 @@ angular.module('mad-libs', [])
             $scope.possessive = "her";
             $scope.poss = "her";
         };
-
+        $scope.submit = function(){
+            $scope.validation=false;
+            if($scope.madLibsForm.$valid){
+                $scope.validation=true;
+                $scope.resetForm = false;
+                $scope.displayLibs = true;
+            }
+        };
+        $scope.reset = function(){
+            $scope.displayLibs = false;
+            $scope.resetForm = true;
+            $scope.maleName = null;
+            $scope.dirtyTask = null;
+            $scope.obnoxiousCelebrity = null;
+            $scope.jobTitle = null;
+            $scope.tediousTask = null;
+            $scope.uselessSkill = null;
+            $scope.uadjective = null;
+            $scope.celebrity = null;
+            $scope.HugeNumber = null;
+            $scope.adjective = null;
+            //$scope.madLibsForm.$setPristine();
+        };
     }]);
