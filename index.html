@@ -5,7 +5,8 @@
     <title>ng-madlibs</title>
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/style.css">
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script type="text/javascript" src="http://code.angularjs.org/1.2.16/angular.js"></script>
+    <script type="text/javascript" src="http://code.angularjs.org/1.2.16/angular-animate.js"></script>
     <script type="text/javascript" src="app.js"></script>
 
 </head>
@@ -50,7 +51,7 @@
                 <p ng-if="submitted && !validation">You must fill all the required fields</p>
             </div>
         </form>
-        <div class="row" ng-show="displayLibs">
+        <div class="row libs_result" ng-show="displayLibs">
             <div class="col-md-1"></div>
             <div class="col-md-10">
                 <p>

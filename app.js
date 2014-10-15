@@ -1,5 +1,5 @@
 
-angular.module('mad-libs', [])
+angular.module('mad-libs', ['ngAnimate'])
     .controller('LibsController', ['$scope', function($scope) {
         //setting up default gender
         $scope.subject = "he";

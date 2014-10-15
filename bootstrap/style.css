@@ -3,3 +3,13 @@
 .head>img{height:100%}
 .mainInputs{margin-top:20px;}
 .libs{margin-top:20px;}
+.libs_result{
+    -webkit-transition:all linear 0.5s;
+    transition:all linear 0.5s;
+    display:block!important;
+    opacity:1;
+}
+
+.libs_result.ng-hide{
+    opacity:0;
+}
